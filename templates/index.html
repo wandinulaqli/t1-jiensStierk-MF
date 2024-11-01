@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Maulidin Fikri</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- <link rel="stylesheet" href="https://codepen.io/username/pen/aBcDef.css"> -->
+
+    <!--Import Google Icon Font-->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!-- Compiled and minified CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="{{url_for('static', filename='apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{url_for('static', filename='favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{url_for('static', filename='favicon-16x16.png')}}">
+    <link rel="manifest" href="{{url_for('static', filename='site.webmanifest')}}">
+
+    <style media="screen">
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    </style>
+
+  </head>
+  <body>
+      {%if hpredict%}
+        <div id="login-button" style="width:500px; height:600px;">
+          <img src="{{gambar}}" style="height:300px"></img>
+          <p style="color:white; text-align:center; font-weight:bold;">{{hpredict}} {{ac}}%</p>
+          <p style="color:white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+      {%else%}
+        <div id="login-button">
+          <img src="https://dqcgrsy5v35b9.cloudfront.net/cruiseplanner/assets/img/icons/login-w-icon.png"></img>
+          <h6 style="color:white; text-align:center;">Maulidin Fikri<br>2011032</h6>
+        </div>
+      {%endif%}
+
+    <div id="container">
+      <h1>Prediksi Stiker</h1>
+      <span class="close-btn">
+        <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+      </span>
+
+      <form class="" action="" method="post">
+        <label for="country" style="color:white;">Permukaan Stiker:</label>
+        <select id="country" name="name1">
+          <option value="halus">Halus dan Mengkilap</option>
+          <option value="tebal">Tebal dan Bertekstur</option>
+          <option value="berlubang">Tekstur Berlubang</option>
+          <option value="transparan">Transparan</option>
+        </select>
+        <label for="country" style="color:white;">Kegunaan Stiker:</label>
+        <select id="country" name="name2">
+          <option value="tahanAir">Tahan Air</option>
+          <option value="tahanSinarMatahari">Tahan Paparan Sinar Matahari</option>
+          <option value="memantulkanCahaya">Memantulkan Cahaya</option>
+          <option value="dayaRekatKuat">Daya Rekat yg Kuat</option>
+        </select>
+        <!-- <input type="email" name="name1" placeholder="E-mail">
+        <input type="password" name="name2" placeholder="Password"> -->
+        <!-- <a href="#">Predict</a> -->
+        <input class="sm" type="submit" name="submit" value="Predict">
+
+        <div id="remember-container">
+          <input type="checkbox" id="checkbox-2-1" class="checkbox" checked="checked"/>
+          <span id="remember">Tugas Akhir</span>
+          <span id="forgotten">Teknik Komputer/USCND</span>
+        </div>
+      </form>
+    </div>
+
+    <!-- Forgotten Password Container -->
+    <div id="forgotten-container">
+      <h1>Faultas Teknik<br>Teknik Komputer</h1>
+      <span class="close-btn">
+        <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png"></img>
+        <!-- <p>{{input3}}</p>
+        <p>{{input2}}</p>
+        <p>{{input1}}</p> -->
+      </span>
+
+      <form>
+        <!-- <input type="email" name="email" placeholder="E-mail"> -->
+        <img src="../static/kpmaulidin.jpeg"></img>
+        <a href="https://www.uscnd.ac.id/" class="orange-btn">www.uscnd.ac.id</a>
+      </form>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js" charset="utf-8"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/static/script.js"></script>
+  </body>
+</html>
